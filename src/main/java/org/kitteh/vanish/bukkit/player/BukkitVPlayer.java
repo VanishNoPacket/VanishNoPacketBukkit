@@ -44,7 +44,7 @@ public class BukkitVPlayer extends VPlayer {
     @Override
     public boolean equals(Object object) {
         if (object instanceof BukkitVPlayer) {
-            return this.hashCode() == ((BukkitVPlayer) object).hashCode();
+            return this.getName().equals(((BukkitVPlayer) object).getName());
         }
         if (object instanceof Player) {
             return this.bukkitPlayer.equals((Player) object);

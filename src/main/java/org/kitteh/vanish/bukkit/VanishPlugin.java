@@ -13,11 +13,13 @@ public class VanishPlugin extends JavaPlugin{
     @Override
     public void onEnable() {
         new PlayerJoinListener(this);
+        
+        this.getServer().getScheduler().scheduleSyncDelayedTask(this, new TockTask(this), 10);
     }
     
     @Override
     public void onDisable() {
-        
+        this.getServer().getScheduler().cancelTasks(this);
     }
 
 }
