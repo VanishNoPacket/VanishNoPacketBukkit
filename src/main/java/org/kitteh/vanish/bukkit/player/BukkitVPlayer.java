@@ -16,7 +16,6 @@ public class BukkitVPlayer extends VPlayer {
 
     @Override
     public void tock() {
-        // TODO Auto-generated method stub
 
     }
 

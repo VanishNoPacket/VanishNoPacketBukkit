@@ -23,6 +23,7 @@ public class VanishPlugin extends JavaPlugin{
             new Localization("english");
         }
         new PlayerJoinListener(this);
+        this.getCommand("vanish").setExecutor(new BaseVanishCommand(this));
         
         this.getServer().getScheduler().scheduleSyncDelayedTask(this, new TockTask(this), 10);
         
